@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion AppVersions.compileSdk
+    defaultConfig {
+        applicationId AppVersions.packageName
+        minSdkVersion AppVersions.minSdk
+        targetSdkVersion AppVersions.targetSdk
+        versionCode AppVersions.versionCode
+        versionName AppVersions.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+}
+
+dependencies {
+    implementation Dependencies.kotlinStdLib
+    implementation Dependencies.androidxAppCompat
+    implementation Dependencies.androidxConstraintLayout
+    implementation Dependencies.androidxRecyclerView
+    implementation Dependencies.androidxKtx
+    implementation Dependencies.rxJava
+    implementation Dependencies.rxJavaAndroid
+    implementation Dependencies.retrofit
+    implementation Dependencies.retrofitRx
+    implementation Dependencies.retrofitMoshi
+    implementation Dependencies.koin
+    implementation Dependencies.koinAndroid
+    implementation Dependencies.timber
+
+    implementation Dependencies.moshi
+    kapt Dependencies.moshiCodegen
+
+    testImplementation Dependencies.junit
+    testImplementation Dependencies.mockitoKotlin
+
+    androidTestImplementation Dependencies.androidxTestRunner
+    androidTestImplementation Dependencies.androidxEspresso
+}

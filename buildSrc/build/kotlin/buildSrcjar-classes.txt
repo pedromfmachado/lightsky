@@ -1,0 +1,1 @@
+/Users/pedromachado/Documents/work/personal/tests/LightSky/buildSrc/build/classes/kotlin/main/AppVersions.class:/Users/pedromachado/Documents/work/personal/tests/LightSky/buildSrc/build/classes/kotlin/main/DepVersions.class:/Users/pedromachado/Documents/work/personal/tests/LightSky/buildSrc/build/classes/kotlin/main/Dependencies.class

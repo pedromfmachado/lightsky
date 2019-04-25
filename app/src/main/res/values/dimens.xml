@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="current_forecast_padding_top">30dp</dimen>
+    <dimen name="current_forecast_padding_bottom">30dp</dimen>
+    <dimen name="current_forecast_temperature_text_size">100sp</dimen>
+    <dimen name="hourly_forecast_temperature_padding">20dp</dimen>
+    <dimen name="hourly_forecast_temperature_text_size">30sp</dimen>
+    <dimen name="daily_forecast_temperature_padding">20dp</dimen>
+    <dimen name="daily_forecast_temperature_text_size">40sp</dimen>
+</resources>
