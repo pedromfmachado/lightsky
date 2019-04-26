@@ -4,7 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="@dimen/hourly_forecast_temperature_padding">
+    android:padding="@dimen/hourly_forecast_padding">
+
+    <TextView
+        android:id="@+id/hourlyForecastHourTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/hourly_forecast_hour_text_size"
+        app:layout_constraintBottom_toTopOf="@id/hourlyForecastStateAnimationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="02" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/hourlyForecastStateAnimationView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@id/hourlyForecastTemperatureTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hourlyForecastHourTextView"
+        app:lottie_rawRes="@raw/weather_cloudynight" />
 
     <TextView
         android:id="@+id/hourlyForecastTemperatureTextView"
@@ -12,7 +35,9 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="@dimen/hourly_forecast_temperature_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="20" />
+        app:layout_constraintTop_toBottomOf="@id/hourlyForecastStateAnimationView"
+        tools:text=" 20\u02DA" />
 </androidx.constraintlayout.widget.ConstraintLayout>

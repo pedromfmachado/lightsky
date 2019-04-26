@@ -10,7 +10,9 @@ private const val CURRENT_FORECAST_TYPE = 0
 private const val HOURLY_FORECAST_TYPE = 1
 private const val DAILY_FORECAST_TYPE = 2
 
-class ForecastAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class ForecastAdapter(
+        private val viewPool: RecyclerView.RecycledViewPool
+) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var currentForecast: ForecastItem? = null
     private val hourlyForecast: MutableList<ForecastItem> = mutableListOf()
@@ -42,7 +44,7 @@ class ForecastAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) = when (holder) {
         is CurrentForecastViewHolder -> holder.bind(currentForecast)
-        is HourlyForecastRowViewHolder -> holder.bind(hourlyForecast)
+        is HourlyForecastRowViewHolder -> holder.bind(hourlyForecast, viewPool)
         is DailyForecastViewHolder -> holder.bind(dailyForecast[position - 2])
         else -> throw IllegalStateException("Unknown view holder!")
     }

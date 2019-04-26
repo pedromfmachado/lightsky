@@ -10,13 +10,21 @@ import kotlinx.android.synthetic.main.item_current_forecast.view.*
 class CurrentForecastViewHolder(parent: ViewGroup) : BaseViewHolder(parent, R.layout.item_current_forecast) {
 
     fun bind(forecast: ForecastItem?) {
-        forecast?.let {
-            itemView.currentForecastTemperatureTextView.text = it.temperature.toString()
-            itemView.currentForecastTemperatureTextView.isVisible = true
-            itemView.currentForecastProgressBar.isVisible = false
-        } ?: run {
-            itemView.currentForecastTemperatureTextView.isVisible = false
-            itemView.currentForecastProgressBar.isVisible = true
+        with(itemView) {
+            forecast?.let {
+                currentForecastStateAnimationView.setAnimation(it.iconRes)
+                currentForecastTemperatureTextView.text = context.getString(R.string.temperature, it.temperature)
+                currentForecastSummaryTextView.text = it.summary
+                currentForecastStateAnimationView.isVisible = true
+                currentForecastTemperatureTextView.isVisible = true
+                currentForecastSummaryTextView.isVisible = true
+                currentForecastProgressBar.isVisible = false
+            } ?: run {
+                currentForecastStateAnimationView.isVisible = false
+                currentForecastTemperatureTextView.isVisible = false
+                currentForecastSummaryTextView.isVisible = false
+                currentForecastProgressBar.isVisible = true
+            }
         }
     }
 }

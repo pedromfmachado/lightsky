@@ -29,8 +29,10 @@ dependencies {
     implementation Dependencies.koin
     implementation Dependencies.koinAndroid
     implementation Dependencies.timber
+    implementation Dependencies.lottie
 
     implementation Dependencies.moshi
+    implementation Dependencies.moshiLazyAdapters
     kapt Dependencies.moshiCodegen
 
     testImplementation Dependencies.junit

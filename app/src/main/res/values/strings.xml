@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">LightSky</string>
+    <string name="temperature">\u0020%.0f\u02DA</string>
+    <string name="hour">%02d</string>
 </resources>

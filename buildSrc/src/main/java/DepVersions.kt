@@ -22,5 +22,7 @@ object DepVersions {
     val retrofit = "2.5.0"
     val koin = "2.0.0-rc-2"
     val moshi = "1.8.0"
+    val moshiLazyAdapters = "2.2"
     val timber = "4.7.1"
+    val lottie = "3.0.1"
 }

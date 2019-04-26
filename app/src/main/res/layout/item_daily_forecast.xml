@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/daily_forecast_temperature_padding">
+    android:padding="@dimen/daily_forecast_padding">
 
     <TextView
-        android:id="@+id/dailyForecastTemperatureTextView"
-        android:layout_width="match_parent"
+        android:id="@+id/dailyForecastWeekDayTextView"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/daily_forecast_week_day_text_size"
+        tools:text="Thursday" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/dailyForecastStateAnimationView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/dailyForecastMaxTemperatureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:gravity="center"
         android:textSize="@dimen/daily_forecast_temperature_text_size"
-        app:layout_constraintTop_toTopOf="parent"
         tools:text="20" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/dailyForecastMinTemperatureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:textSize="@dimen/daily_forecast_temperature_text_size"
+        tools:text="5" />
+</LinearLayout>

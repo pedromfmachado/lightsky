@@ -27,5 +27,7 @@ object Dependencies {
     val koinAndroid = "org.koin:koin-android:${DepVersions.koin}"
     val moshi = "com.squareup.moshi:moshi:${DepVersions.moshi}"
     val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${DepVersions.moshi}"
+    val moshiLazyAdapters = "com.serjltt.moshi:moshi-lazy-adapters:${DepVersions.moshiLazyAdapters}"
     val timber = "com.jakewharton.timber:timber:${DepVersions.timber}"
+    val lottie = "com.airbnb.android:lottie:${DepVersions.lottie}"
 }
