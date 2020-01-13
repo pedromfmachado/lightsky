@@ -4,10 +4,13 @@ pipeline {
     stages {
         stage('Hello') {
             agent {
-                docker { image 'maven:3-alpine' }
+                docker { 
+                    image 'thyrlian/android-sdk'
+                    args '-v $WORKSPACE:/project'
+                }
             }
             steps {
-                sh 'mvn --version'
+                sh 'ls /project'
             }
         }
     }
